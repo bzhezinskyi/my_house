@@ -1,0 +1,8 @@
+.logo {
+  &__text {
+    font-size: toRem(24);
+    &--yellow {
+      color: var(--accent);
+    }
+  }
+}

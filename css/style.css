@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&family=Roboto:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&display=swap");
+:root {
+  --primary: #0a9396;
+  --secondary: #94d2bd;
+  --accent: #e6ce14;
+  --inverse: #ffff3f;
+  --bg-primary: #242423;
+  --bg-secondary: #2f303a;
+  --bg-accent: #4cc9f0;
+  --bg-inverse: #2d00f7;
+  --text-primary: #ffffff;
+  --text-secondary: #757575;
+  --text-accent: #ffff3f;
+  --text-inverse: #e8eddf;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  display: inline-block;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #000;
+  line-height: 1;
+  font-family: "Roboto";
+  font-size: 1rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "Roboto";
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+label {
+  display: inline-block;
+}
+
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+@supports (overflow: clip) {
+  .wrapper {
+    overflow: clip;
+  }
+}
+.wrapper > main {
+  flex: 1 1 auto;
+}
+.wrapper > * {
+  min-width: 0;
+}
+
+[class*=__container] {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+.title {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.subtitle {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.logo__text {
+  font-size: 1.5rem;
+}
+.logo__text--yellow {
+  color: var(--accent);
+}
+
+.footer {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+.footer__container {
+  text-align: center;
+}
+@media (man-widht: 768px) {
+  .footer__container {
+    display: flex;
+  }
+}
+.footer__contacts {
+  margin-top: 3.75rem;
+  margin-bottom: 3.75rem;
+}
+.footer__social {
+  margin-bottom: 3.75rem;
+}
+
+@media (man-widht: 768px) {
+  .contacts {
+    display: flex;
+  }
+}
+.contacts__logo {
+  margin-bottom: 1.25rem;
+}
+.contacts__item:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.contacts__link:hover,
+.contacts__link :focus {
+  color: var(--text-accent);
+}
+.contacts__link--number {
+  color: var(--text-secondary);
+}
+
+.social__title {
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+  line-height: 1rem;
+  text-transform: uppercase;
+}
+.social__list {
+  display: flex;
+  justify-content: center;
+}
+.social__item:not(:last-child) {
+  margin-right: 1rem;
+}
+.social__link:hover,
+.social__link :focus {
+  color: var(--text-accent);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 25rem;
+}
+.services {
+  margin-bottom: 1.875rem;
+}
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.services-list__items {
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 48rem) {
+  .services-list__items {
+    width: calc(50% - 15px);
+    min-width: 18.125rem;
+  }
+}
+.services-list p {
+  min-height: 2rem;
+  margin-bottom: 0.5rem;
+}
+.services-list__image-box {
+  position: relative;
+  height: 25rem;
+  overflow: hidden;
+}
+.services-list img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.advantages-list__item {
+  margin-bottom: 1.25rem;
+}/*# sourceMappingURL=style.css.map */

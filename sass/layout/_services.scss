@@ -1,0 +1,42 @@
+.services {
+  margin-bottom: toRem(30);
+  &__container {
+  }
+  &__title {
+  }
+  &__list {
+  }
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  &__items {
+    width: 100%;
+    @include ms(tab-s) {
+      width: calc(50% - 15px);
+      min-width: toRem(290);
+    }
+    text-align: center;
+  }
+  &__title {
+  }
+  & p {
+    min-height: toRem(32);
+    margin-bottom: toRem(8);
+  }
+  &__image-box {
+    position: relative;
+    height: toRem(400);
+    overflow: hidden;
+  }
+
+  & img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+}

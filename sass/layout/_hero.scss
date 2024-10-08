@@ -1,0 +1,16 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  height: toRem(400);
+  // background-image: linear-gradient(to top, var(--inverse), var(--inverse));
+  &__container {
+  }
+  &__title {
+  }
+  &__text {
+  }
+}
