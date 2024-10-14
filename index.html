@@ -14,6 +14,37 @@
             <span class="logo__text logo__text--yellow">Мій </span>
             <span class="logo__text">Дім</span>
           </a>
+          <div class="header__menu menu" id="mobile-menu">
+            <button
+              class="menu__btn menu__btn--open"
+              type="button"
+              data-modal="mobile-menu"
+            >
+              =
+            </button>
+            <div class="menu__overlay modal-exit"></div>
+            <div class="menu__body">
+              <button
+                class="menu__btn menu__btn--close modal-exit"
+                data-modal="mobile-menu"
+              >
+                X
+              </button>
+              <nav class="menu__nav nav">
+                <ul class="nav__list">
+                  <li class="nav__item">
+                    <a class="nav__link" href="#">Наші роботи</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="#">Про нас</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="#">Замовити</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
       </header>
       <main>
@@ -192,5 +223,6 @@
     </div>
     <script src="js/gulp.js"></script>
     <script src="gulpfile.js"></script>
+    <script src="js/modal.js"></script>
   </body>
 </html>

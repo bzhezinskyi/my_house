@@ -5,10 +5,11 @@
   --secondary: #94d2bd;
   --accent: #e6ce14;
   --inverse: #ffff3f;
-  --bg-primary: #242423;
+  --bg-primary: #ffffff;
   --bg-secondary: #2f303a;
-  --bg-accent: #4cc9f0;
-  --bg-inverse: #2d00f7;
+  --bg-accent: #e6ce14d0;
+  --bg-inverse: #ffff3f;
+  --bg-transparent: #2f303a50;
   --text-primary: #ffffff;
   --text-secondary: #757575;
   --text-accent: #ffff3f;
@@ -36,6 +37,12 @@ html,
 body {
   height: 100%;
   min-width: 320px;
+}
+@media (max-width: 47.99375rem) {
+  html.modal-open,
+  body.modal-open {
+    overflow: hidden;
+  }
 }
 
 body {
@@ -143,10 +150,92 @@ h6 {
 .logo__text {
   font-size: 1.5rem;
 }
-.logo__text--yellow {
-  color: var(--accent);
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 5rem;
+  background-color: var(--bg-accent);
 }
-
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+}
+@media (max-width: 47.99375rem) {
+  .menu.open .menu__body {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 18.75rem;
+    background-color: #fff;
+  }
+}
+@media (max-width: 47.99375rem) {
+  .menu.open .menu__overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3137254902);
+  }
+}
+.menu__btn {
+  width: 1.875rem;
+  height: 1.875rem;
+  background-color: var(--bg-primary);
+  border: 0.0625rem solid var(--bg-transparent);
+  border-radius: 0.5rem;
+  fill: var(--bg-primary);
+}
+@media (min-width: 48rem) {
+  .menu__btn {
+    display: none;
+  }
+}
+.menu__btn--close {
+  position: fixed;
+  top: 1.5rem;
+  right: 1rem;
+}
+@media (max-width: 47.99375rem) {
+  .menu__body {
+    display: none;
+  }
+}
+.menu__overlay {
+  display: none;
+}
+@media (max-width: 47.99375rem) {
+  .nav {
+    padding: 3.75rem 1rem;
+  }
+}
+@media (max-width: 47.99375rem) {
+  .nav__list :not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+@media (min-width: 48rem) {
+  .nav__list {
+    display: flex;
+  }
+  .nav__list :not(:last-child) {
+    margin-right: 1.5rem;
+  }
+}
+.nav__item :hover,
+.nav__item :focus {
+  border-bottom: 0.0625rem solid var(--bg-secondary);
+}
 .footer {
   background-color: var(--bg-secondary);
   color: var(--text-primary);

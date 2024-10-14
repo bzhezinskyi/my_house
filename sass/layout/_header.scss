@@ -1,0 +1,109 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  height: toRem(80);
+  background-color: var(--bg-accent);
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: toRem(80);
+  }
+  &__logo {
+  }
+
+  &__menu {
+  }
+}
+
+.menu {
+  &.open {
+    & .menu__body {
+      @include ms(mob-l-up) {
+        display: block;
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+
+        width: toRem(300);
+
+        background-color: #fff;
+      }
+    }
+    & .menu__overlay {
+      @include ms(mob-l-up) {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #00000050;
+      }
+    }
+  }
+  &__btn {
+    @include ms(tab-s) {
+      display: none;
+    }
+    width: toRem(30);
+    height: toRem(30);
+    background-color: var(--bg-primary);
+    border: toRem(1) solid var(--bg-transparent);
+    border-radius: toRem(8);
+    fill: var(--bg-primary);
+
+    &--open {
+    }
+    &--close {
+      position: fixed;
+      top: toRem(24);
+      right: toRem(16);
+    }
+  }
+  &__body {
+    @include ms(mob-l-up) {
+      display: none;
+    }
+  }
+  &__overlay {
+    display: none;
+  }
+
+  &__nav {
+  }
+}
+
+.nav {
+  @include ms(mob-l-up) {
+    padding: toRem(60) toRem(16);
+  }
+  &__list {
+    @include ms(mob-l-up) {
+      :not(:last-child) {
+        margin-bottom: toRem(24);
+      }
+    }
+    @include ms(tab-s) {
+      display: flex;
+      :not(:last-child) {
+        margin-right: toRem(24);
+      }
+    }
+  }
+  &__item {
+    :hover,
+    :focus {
+      border-bottom: toRem(1) solid var(--bg-secondary);
+    }
+  }
+  &__link {
+  }
+}
