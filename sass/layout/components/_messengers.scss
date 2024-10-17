@@ -1,0 +1,35 @@
+.messengers {
+  @include ms(tab-s) {
+    display: none;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__item {
+    width: toRem(48);
+    height: toRem(48);
+    border-radius: 50%;
+    transition: background-color $cubic;
+
+    background-color: var(--bg-secondary);
+    &:hover,
+    &:focus {
+      background-color: var(--bg-accent);
+    }
+  }
+  &__link {
+    padding: toRem(9);
+    transition: fill $cubic;
+    fill: var(--bg-primary);
+    &:hover,
+    &:focus {
+      fill: var(--bg-secondary);
+    }
+    & svg {
+      width: toRem(30);
+      height: toRem(30);
+      fill: inherit;
+    }
+  }
+}
