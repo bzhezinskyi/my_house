@@ -10,7 +10,7 @@
     <div class="wrapper">
       <header class="header">
         <div class="header__container">
-          <a href="/" class="header__logo logo">
+          <a href="#hero" class="header__logo logo">
             <span class="logo__text logo__text--yellow">Мій </span>
             <span class="logo__text">Дім</span>
           </a>
@@ -34,7 +34,9 @@
                 <nav class="menu__nav nav">
                   <ul class="nav__list">
                     <li class="nav__item">
-                      <a class="nav__link modal-exit" href="#">Наші роботи</a>
+                      <a class="nav__link modal-exit" href="#services"
+                        >Наші роботи</a
+                      >
                     </li>
                     <li class="nav__item">
                       <a class="nav__link modal-exit" href="#">Про нас</a>
@@ -50,7 +52,7 @@
                       <a
                         target="_blank"
                         href="https://www.instagram.com/miydimlutsk?igsh=OTc4ajRrdTZtNDdh"
-                        class="messengers__link"
+                        class="messengers__link modal-exit"
                       >
                         <svg>
                           <use href="image/symbol-defs.svg#instagram"></use>
@@ -61,7 +63,7 @@
                       <a
                         target="_blank"
                         href="https://www.facebook.com/MiyDimLutsk"
-                        class="messengers__link"
+                        class="messengers__link modal-exit"
                       >
                         <svg>
                           <use href="image/symbol-defs.svg#facebook"></use>
@@ -69,7 +71,10 @@
                       </a>
                     </li>
                     <li class="messengers__item">
-                      <a href="tel:380502764504" class="messengers__link">
+                      <a
+                        href="tel:380502764504"
+                        class="messengers__link modal-exit"
+                      >
                         <svg>
                           <use href="image/symbol-defs.svg#phone"></use>
                         </svg>
@@ -83,7 +88,7 @@
         </div>
       </header>
       <main>
-        <article class="hero">
+        <article class="hero" id="hero">
           <div class="hero__container">
             <h1 class="hero__title title">Мій Дім</h1>
             <p class="hero__text">
@@ -95,7 +100,7 @@
             </p>
           </div>
         </article>
-        <section class="services">
+        <section class="services" id="services">
           <div class="services__container">
             <h2 class="services__title title">Послуги</h2>
             <ul class="services__list services-list">
@@ -256,8 +261,6 @@
         </div>
       </footer>
     </div>
-    <script src="js/gulp.js"></script>
-    <script src="gulpfile.js"></script>
     <script src="js/modal.js"></script>
   </body>
 </html>

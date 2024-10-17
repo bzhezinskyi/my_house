@@ -22,9 +22,7 @@ modals.forEach((trigger) => {
     document.addEventListener("keydown", escapeKayDown);
 
     exits.forEach((exit) => {
-      exit.addEventListener("click", (e) => {
-        e.preventDefault();
-
+      exit.addEventListener("click", () => {
         modal.classList.remove("open");
         document.body.classList.remove("modal-open");
 
