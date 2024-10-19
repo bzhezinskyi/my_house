@@ -383,7 +383,7 @@ h6 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 25rem;
+  height: 100vh;
 }
 .services {
   padding-top: 5rem;
@@ -433,6 +433,33 @@ h6 {
   height: 100%;
 }
 
+.advantages {
+  padding-top: 5rem;
+}
 .advantages-list__item {
   margin-bottom: 1.25rem;
+}
+.blog {
+  padding-top: 5rem;
+}
+.blog__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.blog__img-link {
+  margin-bottom: 5rem;
+}
+.blog__img {
+  width: calc(100vw - 1.875rem);
+  max-width: 20rem;
+}
+.blog__link {
+  width: 18.75rem;
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  background-color: var(--bg-accent);
 }/*# sourceMappingURL=style.css.map */
