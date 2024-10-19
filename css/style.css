@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&family=Roboto:wght@400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
 :root {
   --primary: #0a9396;
   --secondary: #94d2bd;
@@ -15,6 +16,7 @@
   --text-secondary: #757575;
   --text-accent: #ffff3f;
   --text-inverse: #e8eddf;
+  --container-width: $containerWidth;
 }
 
 * {
@@ -49,7 +51,7 @@ body {
 body {
   color: #000;
   line-height: 1;
-  font-family: "Roboto";
+  font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -61,7 +63,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Roboto";
+  font-family: "Montserrat", sans-serif;
   font-size: inherit;
   line-height: inherit;
   color: inherit;
@@ -133,19 +135,21 @@ h6 {
 
 .title {
   margin-bottom: 1.5rem;
-  font-weight: 700;
-  font-size: 1.75rem;
+  font-weight: 900;
+  font-size: 2.25rem;
   line-height: 1.18;
+  text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.03em;
 }
 
 .subtitle {
   margin-bottom: 0.5rem;
-  font-weight: 700;
-  font-size: 0.875rem;
+  font-weight: 800;
+  font-size: 1.5rem;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .logo__text {
@@ -382,26 +386,14 @@ h6 {
   height: 25rem;
 }
 .services {
+  padding-top: 5rem;
+}
+.services-list__items:not(:last-child) {
   margin-bottom: 1.875rem;
 }
-.services-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-.services-list__items {
-  width: 100%;
-  text-align: center;
-}
-@media (min-width: 48rem) {
-  .services-list__items {
-    width: calc(50% - 15px);
-    min-width: 18.125rem;
-  }
-}
 .services-list p {
-  min-height: 2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  text-align: center;
 }
 .services-list__image-box {
   position: relative;
@@ -414,6 +406,31 @@ h6 {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.875rem;
+}
+.gallery__item {
+  width: calc((100vw - 3.75rem) / 2);
+  height: calc((100vw - 3.75rem) / 2);
+}
+@media (min-width: 64rem) {
+  .gallery__item {
+    width: calc((100vw - 7.5rem) / 4);
+    height: calc((100vw - 7.5rem) / 4);
+    max-width: 16.875rem;
+    max-height: 16.875rem;
+  }
+}
+.gallery__image-box {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .advantages-list__item {

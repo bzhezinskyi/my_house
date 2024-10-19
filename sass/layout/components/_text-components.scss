@@ -1,9 +1,10 @@
 .title {
   margin-bottom: toRem(24);
 
-  font-weight: 700;
-  font-size: toRem(28);
+  font-weight: 900;
+  font-size: toRem(36);
   line-height: 1.18;
+  text-transform: uppercase;
 
   text-align: center;
   letter-spacing: 0.03em;
@@ -11,10 +12,11 @@
 .subtitle {
   margin-bottom: toRem(8);
 
-  font-weight: 700;
-  font-size: toRem(14);
+  font-weight: 800;
+  font-size: toRem(24);
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
 }
 .text {
 }

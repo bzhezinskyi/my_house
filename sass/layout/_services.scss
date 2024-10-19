@@ -1,30 +1,26 @@
 .services {
-  margin-bottom: toRem(30);
+  padding-top: toRem(80);
   &__container {
   }
   &__title {
   }
   &__list {
   }
+  &__gallery {
+  }
 }
 
 .services-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
   &__items {
-    width: 100%;
-    @include ms(tab-s) {
-      width: calc(50% - 15px);
-      min-width: toRem(290);
+    &:not(:last-child) {
+      margin-bottom: toRem(30);
     }
-    text-align: center;
   }
   &__title {
   }
   & p {
-    min-height: toRem(32);
-    margin-bottom: toRem(8);
+    margin-bottom: toRem(12);
+    text-align: center;
   }
   &__image-box {
     position: relative;
@@ -38,5 +34,28 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: toRem(30);
+  &__item {
+    width: calc(calc(100vw - toRem(60)) / 2);
+    height: calc(calc(100vw - toRem(60)) / 2);
+    @include ms(desc-s) {
+      width: calc(calc(100vw - toRem(120)) / 4);
+      height: calc(calc(100vw - toRem(120)) / 4);
+      max-width: toRem(270);
+      max-height: toRem(270);
+    }
+  }
+  &__image-box {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
   }
 }
