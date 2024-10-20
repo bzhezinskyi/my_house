@@ -35,7 +35,7 @@
 
         width: toRem(300);
 
-        background-color: #fff;
+        background-color: var(--bg-primary);
       }
     }
     & .menu__overlay {
@@ -59,7 +59,7 @@
     background-color: var(--bg-primary);
     border: toRem(1) solid var(--bg-transparent);
     border-radius: toRem(12);
-    fill: var(--bg-secondary);
+    fill: var(--bg-inverse);
     & svg {
       width: toRem(40);
       height: toRem(40);
@@ -140,6 +140,7 @@
     @include ms(tab-s) {
       font-size: toRem(18);
       position: relative;
+      transition: font $cubic;
 
       &::after {
         content: "";
@@ -151,10 +152,11 @@
 
         transition: all $cubic;
 
-        background-color: var(--bg-secondary);
+        background-color: var(--bg-inverse);
       }
       &:hover,
       &:focus {
+        font-weight: 600;
         &::after {
           content: "";
           left: 0;

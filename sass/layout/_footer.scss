@@ -1,6 +1,6 @@
 .footer {
-  background-color: var(--bg-secondary);
-  color: var(--text-primary);
+  background-color: var(--bg-inverse);
+  color: var(--text-inverse);
   &__container {
     text-align: center;
     @media (man-widht: 768px) {

@@ -6,16 +6,17 @@
   --secondary: #94d2bd;
   --accent: #e6ce14;
   --inverse: #ffff3f;
+  --transparent: #ffffff00;
   --bg-primary: #ffffff;
-  --bg-secondary: #2f303a;
+  --bg-secondary: #ebebeb;
   --bg-accent: #e6ce14;
-  --bg-inverse: #ffff3f;
+  --bg-inverse: #2f303a;
   --bg-transparent: #2f303a50;
   --bg-accent-transparent: #e6ce14d0;
-  --text-primary: #ffffff;
+  --text-primary: #000000;
   --text-secondary: #757575;
   --text-accent: #ffff3f;
-  --text-inverse: #e8eddf;
+  --text-inverse: #ffffff;
   --container-width: $containerWidth;
 }
 
@@ -170,7 +171,7 @@ h6 {
   height: 3rem;
   border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-inverse);
 }
 .messengers__item:hover, .messengers__item:focus {
   background-color: var(--bg-accent);
@@ -181,12 +182,30 @@ h6 {
   fill: var(--bg-primary);
 }
 .messengers__link:hover, .messengers__link:focus {
-  fill: var(--bg-secondary);
+  fill: var(--bg-inverse);
 }
 .messengers__link svg {
   width: 1.875rem;
   height: 1.875rem;
   fill: inherit;
+}
+
+.button {
+  width: 18.75rem;
+  height: 3rem;
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+  border-radius: 1rem;
+  text-align: center;
+  background-color: var(--bg-accent);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button:hover, .button:focus {
+  width: 19.375rem;
+  height: 3.25rem;
+  padding: 1.0625rem;
+  margin-bottom: 0;
+  font-weight: 600;
 }
 
 .header {
@@ -214,7 +233,7 @@ h6 {
     z-index: 1;
     transform: translateX(0);
     width: 18.75rem;
-    background-color: #fff;
+    background-color: var(--bg-primary);
   }
 }
 @media (max-width: 47.99375rem) {
@@ -234,7 +253,7 @@ h6 {
   background-color: var(--bg-primary);
   border: 0.0625rem solid var(--bg-transparent);
   border-radius: 0.75rem;
-  fill: var(--bg-secondary);
+  fill: var(--bg-inverse);
 }
 @media (min-width: 48rem) {
   .menu__btn {
@@ -303,6 +322,7 @@ h6 {
   .nav__link {
     font-size: 1.125rem;
     position: relative;
+    transition: font 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .nav__link::after {
     content: "";
@@ -312,7 +332,10 @@ h6 {
     width: 0;
     height: 0.125rem;
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-inverse);
+  }
+  .nav__link:hover, .nav__link:focus {
+    font-weight: 600;
   }
   .nav__link:hover::after, .nav__link:focus::after {
     content: "";
@@ -322,8 +345,8 @@ h6 {
 }
 
 .footer {
-  background-color: var(--bg-secondary);
-  color: var(--text-primary);
+  background-color: var(--bg-inverse);
+  color: var(--text-inverse);
 }
 .footer__container {
   text-align: center;
@@ -387,7 +410,19 @@ h6 {
   height: 100vh;
 }
 .services {
+  position: relative;
   padding-top: 5rem;
+}
+.services::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+.services__container {
+  padding-top: 1.25rem;
 }
 .services-list__items:not(:last-child) {
   margin-bottom: 1.875rem;
@@ -434,16 +469,22 @@ h6 {
   height: 100%;
 }
 
-.advantages {
-  padding-top: 5rem;
-}
-.advantages-list__item {
-  margin-bottom: 1.25rem;
-}
 .blog {
+  position: relative;
   padding-top: 5rem;
+  background-color: var(--bg-secondary);
+}
+.blog::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4.9375rem;
+  background-color: var(--bg-primary);
 }
 .blog__container {
+  padding-top: 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -456,11 +497,23 @@ h6 {
   width: calc(100vw - 1.875rem);
   max-width: 20rem;
 }
-.blog__link {
-  width: 18.75rem;
-  height: 3rem;
-  padding: 1rem;
-  border-radius: 1rem;
-  text-align: center;
+.advantages {
+  position: relative;
+  padding-top: 5rem;
   background-color: var(--bg-accent);
+}
+.advantages::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4.9375rem;
+  background-color: var(--bg-secondary);
+}
+.advantages__container {
+  padding-top: 1.25rem;
+}
+.advantages-list__item :not(:last-child) {
+  margin-bottom: 1.25rem;
 }/*# sourceMappingURL=style.css.map */

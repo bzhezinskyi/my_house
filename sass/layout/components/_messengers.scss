@@ -12,7 +12,7 @@
     border-radius: 50%;
     transition: background-color $cubic;
 
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-inverse);
     &:hover,
     &:focus {
       background-color: var(--bg-accent);
@@ -24,7 +24,7 @@
     fill: var(--bg-primary);
     &:hover,
     &:focus {
-      fill: var(--bg-secondary);
+      fill: var(--bg-inverse);
     }
     & svg {
       width: toRem(30);

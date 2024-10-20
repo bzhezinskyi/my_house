@@ -3,18 +3,19 @@
   --secondary: #94d2bd;
   --accent: #e6ce14;
   --inverse: #ffff3f;
+  --transparent: #ffffff00;
 
   --bg-primary: #ffffff;
-  --bg-secondary: #2f303a;
+  --bg-secondary: #ebebeb;
   --bg-accent: #e6ce14;
-  --bg-inverse: #ffff3f;
+  --bg-inverse: #2f303a;
   --bg-transparent: #2f303a50;
   --bg-accent-transparent: #e6ce14d0;
 
-  --text-primary: #ffffff;
+  --text-primary: #000000;
   --text-secondary: #757575;
   --text-accent: #ffff3f;
-  --text-inverse: #e8eddf;
+  --text-inverse: #ffffff;
 
   --container-width: $containerWidth;
 }

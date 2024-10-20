@@ -1,0 +1,22 @@
+.button {
+  width: toRem(300);
+  height: toRem(48);
+  padding: toRem(16);
+  margin-bottom: toRem(4);
+  border-radius: toRem(16);
+
+  text-align: center;
+  background-color: var(--bg-accent);
+
+  transition: all $cubic;
+
+  &:hover,
+  &:focus {
+    width: toRem(310);
+    height: toRem(52);
+    padding: toRem(17);
+    margin-bottom: 0;
+
+    font-weight: 600;
+  }
+}
