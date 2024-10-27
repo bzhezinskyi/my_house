@@ -1,0 +1,19 @@
+.contacts {
+  text-align: center;
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: toRem(16);
+    }
+  }
+  &__link {
+    font-weight: 600;
+
+    &:hover,
+    :focus {
+      color: var(--text-accent);
+    }
+  }
+  &__link--number {
+    color: var(--text-secondary);
+  }
+}

@@ -1,8 +1,23 @@
 .logo {
-  &__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: toRem(100);
+  &__img {
+    height: 72%;
+    margin-bottom: toRem(4);
+  }
+  &__txt {
+    font-family: "Literata";
+    font-weight: 700;
     font-size: toRem(24);
-    &--yellow {
-      // color: var(--accent);
+    text-transform: uppercase;
+  }
+  &-s {
+    height: toRem(56);
+    & .logo__txt {
+      font-size: toRem(12);
     }
   }
 }

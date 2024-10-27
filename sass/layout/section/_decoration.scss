@@ -1,0 +1,48 @@
+.decoration {
+  position: relative;
+  padding-top: toRem(80);
+
+  background-color: var(--bg-accent);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: toRem(79);
+    background-color: var(--bg-secondary);
+  }
+  &__container {
+  }
+  &__title {
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include ms(mob-l) {
+      justify-content: space-around;
+      gap: toRem(30);
+    }
+  }
+  &__item {
+    width: toRem(290);
+    max-width: toRem(570);
+    @include ms(mob-l-up) {
+      &:not(:last-child) {
+        margin-bottom: toRem(30);
+      }
+      &:nth-child(even) {
+        margin-right: 0;
+        margin-left: auto;
+      }
+    }
+    @include ms(mob-l) {
+      width: calc(calc(100vw - toRem(60)) / 2);
+    }
+  }
+  &__img {
+    width: 100%;
+  }
+}

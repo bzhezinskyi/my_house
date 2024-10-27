@@ -1,11 +1,7 @@
 .messengers {
-  @include ms(tab-s) {
-    display: none;
-  }
-  &__list {
-    display: flex;
-    justify-content: space-around;
-  }
+  display: flex;
+  justify-content: space-evenly;
+  width: toRem(268);
   &__item {
     width: toRem(48);
     height: toRem(48);
@@ -17,6 +13,9 @@
     &:focus {
       background-color: var(--bg-accent);
     }
+    &--inverse {
+      background-color: var(--bg-primary);
+    }
   }
   &__link {
     padding: toRem(9);
@@ -24,6 +23,9 @@
     fill: var(--bg-primary);
     &:hover,
     &:focus {
+      fill: var(--bg-inverse);
+    }
+    &--inverse {
       fill: var(--bg-inverse);
     }
     & svg {

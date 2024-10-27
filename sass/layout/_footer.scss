@@ -1,67 +1,31 @@
 .footer {
   background-color: var(--bg-inverse);
   color: var(--text-inverse);
+
   &__container {
-    text-align: center;
-    @media (man-widht: 768px) {
+    padding-top: toRem(60);
+    padding-bottom: toRem(48);
+
+    @include ms(tab-s) {
       display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-  }
-
-  &__contacts {
-    margin-top: toRem(60);
-    margin-bottom: toRem(60);
-  }
-  &__social {
-    margin-bottom: toRem(60);
-  }
-}
-
-.contacts {
-  @media (man-widht: 768px) {
-    display: flex;
   }
   &__logo {
-    margin-bottom: toRem(20);
-  }
-  &__list {
-  }
-  &__item {
-    &:not(:last-child) {
-      margin-bottom: toRem(8);
+    @include ms(mob-l-up) {
+      margin-bottom: toRem(48);
     }
   }
-  &__link {
-    &:hover,
-    :focus {
-      color: var(--text-accent);
+  &__contacts {
+    @include ms(mob-l-up) {
+      margin-bottom: toRem(48);
     }
   }
-  &__link--number {
-    color: var(--text-secondary);
-  }
-}
-.social {
-  &__title {
-    margin-bottom: toRem(20);
-
-    font-weight: 700;
-    line-height: toRem(16);
-    text-transform: uppercase;
-  }
-  &__list {
-    display: flex;
-    justify-content: center;
-  }
-  &__item {
-    &:not(:last-child) {
-      margin-right: toRem(16);
-    }
-  }
-  &__link {
-    &:hover,
-    :focus {
-      color: var(--text-accent);
+  &__messengers {
+    @include ms(mob-l-up) {
+      max-width: toRem(320);
+      margin: auto;
     }
   }
 }

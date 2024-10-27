@@ -1,0 +1,29 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  height: calc(100vh - toRem(80));
+  background-color: var(--bg-secondary);
+  // background-image: linear-gradient(to top, var(--inverse), var(--inverse));
+  &__container {
+    display: flex;
+  }
+  &__content {
+  }
+  &__logo {
+    width: toRem(240);
+  }
+  &__title {
+    font-family: "Literata";
+    font-weight: 700;
+    font-size: toRem(48);
+  }
+  &__text {
+  }
+  &__video {
+    width: toRem(300);
+  }
+}

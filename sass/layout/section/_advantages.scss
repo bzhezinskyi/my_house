@@ -1,0 +1,38 @@
+.advantages {
+  position: relative;
+  padding-top: toRem(80);
+  padding-bottom: toRem(80);
+  background-color: var(--bg-accent);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: toRem(79);
+    background-color: var(--bg-secondary);
+  }
+  &__container {
+    padding-top: toRem(20);
+  }
+  &__title {
+  }
+  &__list {
+  }
+}
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  &__item {
+    max-width: toRem(440);
+
+    &:not(:last-child) {
+      margin-bottom: toRem(48);
+    }
+    text-align: center;
+  }
+  &__title {
+  }
+}
