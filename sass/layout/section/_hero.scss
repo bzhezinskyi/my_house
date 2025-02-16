@@ -1,25 +1,43 @@
 .hero {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
 
-  height: calc(100vh - toRem(80));
-  background-color: var(--bg-secondary);
+  // height: calc(100vh - toRem(80));
+  height: 100vh;
+
+  // background-color: var(--bg-secondary);
   // background-image: linear-gradient(to top, var(--inverse), var(--inverse));
+  background-image: linear-gradient(to top, #2f303a66, #2f303a66);
+
+  color: var(--text-accent);
+  &__img {
+    position: absolute;
+
+    z-index: -1;
+
+    @include ms(tab-s) {
+      width: 100vw;
+    }
+  }
   &__container {
     display: flex;
-  }
-  &__content {
-  }
-  &__logo {
-    width: toRem(240);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
   }
   &__title {
     font-family: "Literata";
     font-weight: 700;
     font-size: toRem(48);
+    margin-bottom: 40vh;
+  }
+  &__logo {
+    margin-bottom: toRem(16);
+    color: var(--text-inverse);
   }
   &__text {
   }

@@ -4,15 +4,15 @@
 
   background-color: var(--bg-accent);
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: toRem(79);
-    background-color: var(--bg-secondary);
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: toRem(79);
+  //   background-color: var(--bg-secondary);
+  // }
   &__container {
   }
   &__title {
