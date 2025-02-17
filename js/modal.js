@@ -4,7 +4,9 @@ modals.forEach((trigger) => {
   trigger.addEventListener("click", (e) => {
     e.preventDefault();
     const modal = document.getElementById(trigger.dataset.modal);
-
+    if (trigger.tagName === "IMG") {
+      modal.children[0].children[0].src = trigger.src;
+    }
     modal.classList.add("open");
     document.body.classList.add("modal-open");
 
